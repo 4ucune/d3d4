@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d3d"
+version = "0.1.0.dev0"
+description = "Lectura de archivos NEFIS (Delft3D-FLOW trim/trih) en Python puro"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "4ucune"}]
+keywords = ["delft3d", "nefis", "quickplot", "hydrodynamics", "sediment transport"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Hydrology",
+]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+scipy = ["scipy"]
+netcdf = ["netCDF4"]
+test = ["pytest>=7", "scipy"]
+
+[tool.setuptools]
+packages = ["d3d"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+xfail_strict = true

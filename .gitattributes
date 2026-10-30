@@ -1,0 +1,4 @@
+* text=auto
+# Estos dos módulos se mantienen con finales CRLF
+d3d/nefis_dll.py text eol=crlf
+d3d/trimfile.py text eol=crlf

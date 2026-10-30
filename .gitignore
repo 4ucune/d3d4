@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Datos (archivos NEFIS grandes, exportaciones)
+Resultados/
+*.dat
+*.def
+*.nc
+*.mat
+
+# ... salvo los datos de prueba pequeños
+!tests/data/**/*.dat
+!tests/data/**/*.def
+!tests/data/**/*.mat
